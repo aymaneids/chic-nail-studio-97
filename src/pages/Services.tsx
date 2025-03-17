@@ -1,7 +1,7 @@
-
 import React from 'react';
 import AnimatedSection from '../components/AnimatedSection';
-import { Sparkles, Scissors } from 'lucide-react';
+import ServiceCategory from '../components/ServiceCategory';
+import { Sparkles } from 'lucide-react';
 
 const Services = () => {
   // Service categories and their offerings
@@ -100,27 +100,12 @@ const Services = () => {
       <section className="section-container py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {serviceCategories.map((category, index) => (
-            <AnimatedSection key={category.name} animation="slide-up" delay={index * 100}>
-              <div className="glass-card p-8">
-                <div className="flex items-center mb-6">
-                  {index % 2 === 0 ? (
-                    <Scissors size={24} className="text-primary mr-3" />
-                  ) : (
-                    <Sparkles size={24} className="text-primary mr-3" />
-                  )}
-                  <h3 className="text-2xl font-bold">{category.name}</h3>
-                </div>
-                
-                <div className="space-y-4">
-                  {category.items.map((item, idx) => (
-                    <div key={idx} className="flex justify-between items-center pb-2 border-b border-border">
-                      <span className="font-medium">{item.service}</span>
-                      <span className="text-primary font-semibold">{item.price}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </AnimatedSection>
+            <ServiceCategory 
+              key={category.name} 
+              name={category.name} 
+              items={category.items} 
+              index={index} 
+            />
           ))}
         </div>
       </section>

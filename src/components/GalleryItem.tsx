@@ -5,13 +5,17 @@ interface GalleryItemProps {
   src: string;
   alt: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const GalleryItem: React.FC<GalleryItemProps> = ({ src, alt, className = '' }) => {
+const GalleryItem: React.FC<GalleryItemProps> = ({ src, alt, className = '', onClick }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className={`relative overflow-hidden rounded-xl ${className}`}>
+    <div 
+      className={`relative overflow-hidden rounded-xl ${className} ${onClick ? 'cursor-pointer' : ''}`}
+      onClick={onClick}
+    >
       {!isLoaded && (
         <div className="absolute inset-0 bg-muted animate-pulse rounded-xl"></div>
       )}

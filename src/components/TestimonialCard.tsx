@@ -6,11 +6,12 @@ interface TestimonialCardProps {
   name: string;
   rating: number;
   text: string;
+  className?: string;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, rating, text }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, rating, text, className = '' }) => {
   return (
-    <div className="glass-card p-6 h-full">
+    <div className={`glass-card p-6 h-full ${className}`}>
       <div className="flex mb-3">
         {[...Array(5)].map((_, i) => (
           <Star
