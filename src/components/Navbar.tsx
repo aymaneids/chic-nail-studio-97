@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,21 +86,33 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Book Now Button (Desktop) */}
-          <div className="hidden md:block">
-            <a href="tel:7735615841" className="button-primary">
-              Book Now
+          {/* Phone Button (Desktop) */}
+          <div className="hidden md:flex items-center space-x-2">
+            <a 
+              href="tel:7735615841" 
+              className="flex items-center space-x-2 button-primary"
+            >
+              <Phone size={16} />
+              <span>Book Now</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden text-foreground p-2 focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center space-x-4">
+            <a 
+              href="tel:7735615841" 
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white"
+            >
+              <Phone size={18} />
+            </a>
+            <button
+              onClick={toggleMenu}
+              className="text-foreground p-2 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -127,9 +139,10 @@ const Navbar: React.FC = () => {
           <div className="pt-2 pb-4">
             <a
               href="tel:7735615841"
-              className="block w-full text-center button-primary"
+              className="flex items-center justify-center space-x-2 w-full text-center button-primary"
             >
-              Book Now
+              <Phone size={16} />
+              <span>Book Now</span>
             </a>
           </div>
         </div>
