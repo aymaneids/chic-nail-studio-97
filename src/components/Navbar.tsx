@@ -99,20 +99,20 @@ const Navbar: React.FC = () => {
           <div className="flex items-center space-x-2">
             {/* Phone Button */}
             {isMobile ? (
-              <a 
-                href="tel:7735615841" 
+              <Link 
+                to="/booking" 
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white"
               >
                 <Phone size={18} />
-              </a>
+              </Link>
             ) : (
-              <a 
-                href="tel:7735615841" 
+              <Link 
+                to="/booking" 
                 className="flex items-center space-x-2 button-primary"
               >
                 <Phone size={16} />
                 <span>Book Now</span>
-              </a>
+              </Link>
             )}
 
             {/* Mobile Menu Button with Dropdown */}
@@ -146,13 +146,13 @@ const Navbar: React.FC = () => {
                     </DropdownMenuItem>
                   ))}
                   <DropdownMenuItem asChild className="mt-2">
-                    <a
-                      href="tel:7735615841"
+                    <Link
+                      to="/booking"
                       className="flex items-center justify-center space-x-2 w-full text-center button-primary px-4 py-3 rounded-lg"
                     >
                       <Phone size={16} />
                       <span>Book Now</span>
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
