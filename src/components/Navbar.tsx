@@ -2,11 +2,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   // Toggle menu
   const toggleMenu = () => {
@@ -86,64 +95,68 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Phone Button (Desktop) */}
-          <div className="hidden md:flex items-center space-x-2">
-            <a 
-              href="tel:7735615841" 
-              className="flex items-center space-x-2 button-primary"
-            >
-              <Phone size={16} />
-              <span>Book Now</span>
-            </a>
-          </div>
+          {/* Phone Button & Mobile Menu */}
+          <div className="flex items-center space-x-2">
+            {/* Phone Button */}
+            {isMobile ? (
+              <a 
+                href="tel:7735615841" 
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white"
+              >
+                <Phone size={18} />
+              </a>
+            ) : (
+              <a 
+                href="tel:7735615841" 
+                className="flex items-center space-x-2 button-primary"
+              >
+                <Phone size={16} />
+                <span>Book Now</span>
+              </a>
+            )}
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <a 
-              href="tel:7735615841" 
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white"
-            >
-              <Phone size={18} />
-            </a>
-            <button
-              onClick={toggleMenu}
-              className="text-foreground p-2 focus:outline-none"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transform transition-transform duration-300 ${
-          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
-        }`}
-      >
-        <div className="px-4 py-2 space-y-2">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className={`block py-3 px-4 text-sm font-medium rounded-lg ${
-                isActive(item.path)
-                  ? 'bg-secondary text-primary'
-                  : 'text-foreground hover:bg-secondary'
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <div className="pt-2 pb-4">
-            <a
-              href="tel:7735615841"
-              className="flex items-center justify-center space-x-2 w-full text-center button-primary"
-            >
-              <Phone size={16} />
-              <span>Book Now</span>
-            </a>
+            {/* Mobile Menu Button with Dropdown */}
+            {isMobile && (
+              <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <DropdownMenuTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="text-foreground focus:outline-none"
+                  >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="end" 
+                  className="w-screen bg-white/95 backdrop-blur-sm mt-2 p-2 rounded-b-lg border-t-0"
+                >
+                  {navItems.map((item) => (
+                    <DropdownMenuItem key={item.name} asChild className="py-3 focus:bg-secondary">
+                      <Link
+                        to={item.path}
+                        className={`flex w-full px-4 py-2 text-sm font-medium rounded-lg ${
+                          isActive(item.path)
+                            ? 'bg-secondary text-primary'
+                            : 'text-foreground'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                  <DropdownMenuItem asChild className="mt-2">
+                    <a
+                      href="tel:7735615841"
+                      className="flex items-center justify-center space-x-2 w-full text-center button-primary px-4 py-3 rounded-lg"
+                    >
+                      <Phone size={16} />
+                      <span>Book Now</span>
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
           </div>
         </div>
       </div>
