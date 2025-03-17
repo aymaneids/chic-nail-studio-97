@@ -10,9 +10,9 @@ import TestimonialCard from '../components/TestimonialCard';
 const Index = () => {
   const galleryImages = [
     'https://images.unsplash.com/photo-1604654894610-df63bc536371',
-    'https://images.unsplash.com/photo-1632344572612-46c00c29e21e',
-    'https://images.unsplash.com/photo-1607779097040-29a04f47fdea',
-    'https://images.unsplash.com/photo-1610314586186-84e0f91ef3bd',
+    'https://images.unsplash.com/photo-1604654894610-df63bc536371',
+    'https://images.unsplash.com/photo-1604654894610-df63bc536371',
+    'https://images.unsplash.com/photo-1604654894610-df63bc536371',
   ];
 
   return (
