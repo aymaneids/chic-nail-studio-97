@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Scissors, Sparkles, Phone, Image, Star, MapPin } from 'lucide-react';
@@ -23,7 +22,7 @@ const Index = () => {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
           <img
-            src="https://images.unsplash.com/photo-1600897435450-70921b22eb68?auto=format&fit=crop&q=80"
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80"
             alt="Spa massage therapy"
             className="w-full h-full object-cover"
           />
@@ -264,3 +263,4 @@ const Index = () => {
 };
 
 export default Index;
+

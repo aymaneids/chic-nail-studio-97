@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import GalleryItem from '../components/GalleryItem';
+import Footer from '../components/Footer';
 
 const Gallery = () => {
   // Categories for gallery filtering
@@ -80,8 +80,8 @@ const Gallery = () => {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
           <img
-            src="https://images.unsplash.com/photo-1583319782680-2c8795fbebfa?auto=format&fit=crop&q=80"
-            alt="Nail art showcase"
+            src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&q=80"
+            alt="Spa treatment room"
             className="w-full h-full object-cover"
           />
         </div>
@@ -89,7 +89,7 @@ const Gallery = () => {
           <AnimatedSection animation="slide-up" className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Gallery</h1>
             <p className="text-lg md:text-xl mb-6 text-white/90">
-              Explore our portfolio of beautiful nail designs
+              Explore our portfolio of massage and body sculpting treatments
             </p>
           </AnimatedSection>
         </div>
@@ -101,7 +101,7 @@ const Gallery = () => {
           <span className="px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 inline-block">
             Our Work
           </span>
-          <h2 className="text-3xl font-bold mb-6">Browse Our Nail Art Collection</h2>
+          <h2 className="text-3xl font-bold mb-6">Browse Our Massage and Body Sculpting Collection</h2>
           <p className="text-muted-foreground mb-8">
             At Nu Image Nails Spa, we take pride in creating beautiful, unique nail designs. 
             Here's a selection of our work to inspire your next visit.
@@ -185,6 +185,9 @@ const Gallery = () => {
           </a>
         </AnimatedSection>
       </section>
+
+      {/* Add Footer */}
+      <Footer />
     </div>
   );
 };

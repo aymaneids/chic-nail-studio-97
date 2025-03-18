@@ -2,6 +2,7 @@ import React from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import ServiceCategory from '../components/ServiceCategory';
 import { Sparkles } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const Services = () => {
   // Service categories and their offerings
@@ -66,8 +67,8 @@ const Services = () => {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
           <img
-            src="https://images.unsplash.com/photo-1631214505544-0f80335804e4?auto=format&fit=crop&q=80"
-            alt="Nail services"
+            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80"
+            alt="Body sculpting service"
             className="w-full h-full object-cover"
           />
         </div>
@@ -75,7 +76,7 @@ const Services = () => {
           <AnimatedSection animation="slide-up" className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
             <p className="text-lg md:text-xl mb-6 text-white/90">
-              Discover our comprehensive range of nail care services
+              Discover our comprehensive range of massage and body sculpting services
             </p>
           </AnimatedSection>
         </div>
@@ -198,6 +199,9 @@ const Services = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Add Footer */}
+      <Footer />
     </div>
   );
 };

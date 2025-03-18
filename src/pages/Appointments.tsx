@@ -1,7 +1,7 @@
-
 import React from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import { Phone, Clock, Calendar, Users, Info, CheckCircle } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const Appointments = () => {
   return (
@@ -11,8 +11,8 @@ const Appointments = () => {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
           <img
-            src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80"
-            alt="Nail salon interior"
+            src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80"
+            alt="Spa appointment booking"
             className="w-full h-full object-cover"
           />
         </div>
@@ -20,7 +20,7 @@ const Appointments = () => {
           <AnimatedSection animation="slide-up" className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Appointments</h1>
             <p className="text-lg md:text-xl mb-6 text-white/90">
-              Book your nail appointment with us
+              Book your massage therapy or body sculpting appointment with us
             </p>
           </AnimatedSection>
         </div>
@@ -262,6 +262,9 @@ const Appointments = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Add Footer */}
+      <Footer />
     </div>
   );
 };

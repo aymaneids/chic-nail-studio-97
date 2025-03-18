@@ -12,8 +12,8 @@ const Contact = () => {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
           <img
-            src="https://images.unsplash.com/photo-1631214505544-0f80335804e4?auto=format&fit=crop&q=80"
-            alt="Spa massage therapy"
+            src="https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?auto=format&fit=crop&q=80"
+            alt="Spa contact and location"
             className="w-full h-full object-cover"
           />
         </div>
