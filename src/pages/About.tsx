@@ -11,7 +11,7 @@ const About = () => {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
           <img
-            src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80"
+            src="https://mountainsidespa.com/wp-content/uploads/2021/02/Top-7-Factors-to-Consider-When-Choosing-a-Spa.jpg"
             alt="Spa wellness treatment"
             className="w-full h-full object-cover"
           />
