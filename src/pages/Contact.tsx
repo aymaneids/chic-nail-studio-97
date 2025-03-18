@@ -2,6 +2,7 @@
 import React from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
           <img
             src="https://images.unsplash.com/photo-1631214505544-0f80335804e4?auto=format&fit=crop&q=80"
-            alt="Nail salon contact"
+            alt="Spa massage therapy"
             className="w-full h-full object-cover"
           />
         </div>
@@ -47,8 +48,8 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Phone</h3>
                   <p className="text-muted-foreground mb-1">Call us to book an appointment or ask questions</p>
-                  <a href="tel:7735615841" className="text-primary font-medium hover:underline">
-                    (773) 561-5841
+                  <a href="tel:+1234567890" className="text-primary font-medium hover:underline">
+                    (123) 456-7890
                   </a>
                 </div>
               </div>
@@ -59,14 +60,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Address</h3>
-                  <p className="text-muted-foreground mb-1">Visit our salon in Lincoln Square</p>
+                  <p className="text-muted-foreground mb-1">Visit our spa in River Edge</p>
                   <a 
-                    href="https://maps.google.com/?q=1931+W+Foster+Ave,+Chicago,+IL+60640" 
+                    href="https://maps.google.com/?q=820+Kinderkamack+Rd,+River+Edge,+NJ+07661" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary font-medium hover:underline"
                   >
-                    1931 W Foster Ave, Chicago, IL 60640
+                    820 Kinderkamack Rd. Lower Office River Edge NJ 07661, River Edge, New Jersey 07661
                   </a>
                 </div>
               </div>
@@ -88,14 +89,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Social Media</h3>
-                  <p className="text-muted-foreground mb-1">Follow us for nail inspiration and updates</p>
+                  <p className="text-muted-foreground mb-1">Follow us for wellness inspiration and updates</p>
                   <a 
-                    href="https://www.instagram.com/nuimagenailsspa/" 
+                    href="https://www.instagram.com/simelaspa/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary font-medium hover:underline"
                   >
-                    @nuimagenailsspa
+                    @simelaspa
                   </a>
                 </div>
               </div>
@@ -105,14 +106,14 @@ const Contact = () => {
           <AnimatedSection animation="slide-left">
             <div className="glass-card p-0 overflow-hidden rounded-xl h-[450px] shadow-elegant">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.2184115892647!2d-87.6787209!3d41.9762752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd1fd01c3d619%3A0x509c3569d8eb3f1b!2s1931%20W%20Foster%20Ave%2C%20Chicago%2C%20IL%2060640!5e0!3m2!1sen!2sus!4v1653443862975!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.0679133013246!2d-74.0381384!3d40.9303306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f9ed29178f97%3A0x4d1d80c3f5e0cf0c!2s820%20Kinderkamack%20Rd%2C%20River%20Edge%2C%20NJ%2007661!5e0!3m2!1sen!2sus!4v1653443862975!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Nu Image Nails Spa Location"
+                title="SimelaSpa Location"
               ></iframe>
             </div>
           </AnimatedSection>
@@ -125,14 +126,17 @@ const Contact = () => {
           <AnimatedSection animation="fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Schedule Your Visit?</h2>
             <p className="text-muted-foreground mb-8">
-              We can't wait to welcome you to Nu Image Nails Spa. Call us today or stop by our salon.
+              We can't wait to welcome you to SimelaSpa. Call us today or stop by our spa.
             </p>
-            <a href="tel:7735615841" className="button-primary">
+            <a href="tel:+1234567890" className="button-primary">
               Call to Book Now
             </a>
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Add Footer */}
+      <Footer />
     </div>
   );
 };

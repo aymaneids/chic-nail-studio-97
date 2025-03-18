@@ -68,10 +68,10 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-xl md:text-2xl font-bold text-foreground font-playfair">
-              Nu Image
+              SimelaSpa
             </span>
             <span className="hidden sm:inline-block text-lg md:text-xl text-nu-pink font-bold">
-              Nails Spa
+              Wellness
             </span>
           </Link>
 

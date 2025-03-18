@@ -6,6 +6,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import ServiceCard from '../components/ServiceCard';
 import GalleryItem from '../components/GalleryItem';
 import TestimonialCard from '../components/TestimonialCard';
+import Footer from '../components/Footer';
 
 const Index = () => {
   const galleryImages = [
@@ -23,23 +24,23 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
           <img
             src="https://images.unsplash.com/photo-1600897435450-70921b22eb68?auto=format&fit=crop&q=80"
-            alt="Beautiful nail art"
+            alt="Spa massage therapy"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="section-container z-10 text-white">
           <AnimatedSection animation="slide-up" className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Nu Image Nails Spa
+              SimelaSpa
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90">
-              Your Destination for Stunning Nails in Lincoln Square
+              Message Therapy & Body Sculpting
             </p>
             <p className="text-base md:text-lg mb-10 text-white/80">
-              Expert Nail Artistry, Impeccable Service, Beautiful Results
+              River Edge, NJ 820 Kinderkamack
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:7735615841" className="button-primary">
+              <a href="tel:+1234567890" className="button-primary">
                 Book an Appointment
               </a>
               <Link to="/services" className="button-secondary bg-white/10 border-white/20 text-white hover:bg-white/20">
@@ -64,12 +65,11 @@ const Index = () => {
           <span className="px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 inline-block">
             About Us
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Welcome to Nu Image Nails Spa</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Welcome to SimelaSpa</h2>
           <p className="text-muted-foreground mb-8">
-            Located in the heart of Lincoln Square, Chicago, Nu Image Nails Spa is dedicated to providing
-            exceptional nail care services. We specialize in creating beautiful, unique nail designs
-            tailored to your personal style. Our team of skilled technicians uses only high-quality
-            products to ensure the best results. We welcome both appointments and walk-ins.
+            Located in River Edge, New Jersey, SimelaSpa is dedicated to providing exceptional massage therapy and body sculpting services. 
+            Our team of skilled therapists uses only high-quality products to ensure the best results for your wellness journey. 
+            We welcome both appointments and walk-ins.
           </p>
           <Link to="/about" className="text-primary font-medium hover:underline">
             Learn more about us →
@@ -85,15 +85,15 @@ const Index = () => {
           </span>
           <h2 className="section-title">Featured Services</h2>
           <p className="section-subtitle">
-            We offer a wide range of nail care services to enhance your natural beauty
+            We offer a wide range of massage therapy and body sculpting services to enhance your natural beauty
           </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           <AnimatedSection animation="slide-up" delay={100}>
             <ServiceCard
-              title="Manicures"
-              description="Pamper your hands with our luxurious manicure services, from basic to deluxe treatments."
+              title="Massage Therapy"
+              description="Relax and rejuvenate with our professional massage therapy services, from deep tissue to relaxation."
               icon={Scissors}
               color="nu-pink"
             />
@@ -101,8 +101,8 @@ const Index = () => {
 
           <AnimatedSection animation="slide-up" delay={200}>
             <ServiceCard
-              title="Pedicures"
-              description="Treat your feet to our rejuvenating pedicure services, designed to relax and beautify."
+              title="Body Sculpting"
+              description="Transform your body with our cutting-edge body sculpting treatments, designed for targeted results."
               icon={Sparkles}
               color="nu-purple"
             />
@@ -110,8 +110,8 @@ const Index = () => {
 
           <AnimatedSection animation="slide-up" delay={300}>
             <ServiceCard
-              title="Nail Art"
-              description="Express your personality with our custom nail art designs, created by our talented technicians."
+              title="Wellness Packages"
+              description="Experience our comprehensive wellness packages, tailored to your individual needs and goals."
               icon={Image}
               color="nu-blue"
             />
@@ -197,23 +197,23 @@ const Index = () => {
           <AnimatedSection animation="slide-right">
             <div className="rounded-xl overflow-hidden h-[400px] shadow-elegant">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.2184115892647!2d-87.6787209!3d41.9762752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd1fd01c3d619%3A0x509c3569d8eb3f1b!2s1931%20W%20Foster%20Ave%2C%20Chicago%2C%20IL%2060640!5e0!3m2!1sen!2sus!4v1653443862975!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.0679133013246!2d-74.0381384!3d40.9303306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f9ed29178f97%3A0x4d1d80c3f5e0cf0c!2s820%20Kinderkamack%20Rd%2C%20River%20Edge%2C%20NJ%2007661!5e0!3m2!1sen!2sus!4v1653443862975!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Nu Image Nails Spa Location"
+                title="SimelaSpa Location"
               ></iframe>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="slide-left">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">Visit Our Salon</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Visit Our Spa</h2>
               <p className="text-muted-foreground">
-                We're conveniently located in the Lincoln Square neighborhood of Chicago. 
+                We're conveniently located in River Edge, New Jersey. 
                 Stop by for a visit or contact us to book your appointment today!
               </p>
               
@@ -222,7 +222,7 @@ const Index = () => {
                   <MapPin className="text-primary mt-1" size={22} />
                   <div>
                     <h4 className="font-medium">Address</h4>
-                    <p className="text-muted-foreground">1931 W Foster Ave, Chicago, IL 60640</p>
+                    <p className="text-muted-foreground">820 Kinderkamack Rd. Lower Office River Edge NJ 07661, River Edge, New Jersey 07661</p>
                   </div>
                 </div>
                 
@@ -230,7 +230,7 @@ const Index = () => {
                   <Phone className="text-primary mt-1" size={22} />
                   <div>
                     <h4 className="font-medium">Phone</h4>
-                    <p className="text-muted-foreground">(773) 561-5841</p>
+                    <p className="text-muted-foreground">(123) 456-7890</p>
                   </div>
                 </div>
                 
@@ -245,7 +245,7 @@ const Index = () => {
               </div>
               
               <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="tel:7735615841" className="button-primary">
+                <a href="tel:+1234567890" className="button-primary">
                   Call to Book
                 </a>
                 <Link to="/contact" className="button-secondary">
@@ -256,6 +256,9 @@ const Index = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Add Footer */}
+      <Footer />
     </div>
   );
 };
